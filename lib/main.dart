@@ -59,11 +59,65 @@ class _MyHomePageState extends State<MyHomePage> {
       body: PageView(
         controller: _controller,
         physics: const NeverScrollableScrollPhysics(),
-        children: const [
-          SlideLayout0(
+        children: [
+          const SlideLayout0(
             tagline: 'Fast, free and full of new features',
             introduction:
                 'The latest version of Ubuntu makes computing easier than ever. Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in Ubuntu 23.04',
+          ),
+          SlideLayout1(
+            tagline: 'Enhance your creativity',
+            introduction:
+                'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.',
+            rows: [
+              TableRow(
+                children: [
+                  const Padding(
+                    padding: EdgeInsetsDirectional.only(bottom: 16, end: 40),
+                    child: Text('Included:'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 16),
+                    child: Row(
+                      children: const [
+                        SizedBox.square(
+                          dimension: 24,
+                          child: Placeholder(),
+                        ),
+                        SizedBox(width: 8),
+                        Text('FeralGameMode'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              TableRow(
+                children: [
+                  const Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 16, 40, 16),
+                    child: Text('Available:'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: Row(
+                      children: const [
+                        SizedBox.square(dimension: 24, child: Placeholder()),
+                        SizedBox(width: 8),
+                        Text('Steam'),
+                        SizedBox(width: 24),
+                        SizedBox.square(dimension: 24, child: Placeholder()),
+                        SizedBox(width: 8),
+                        Text('Discord'),
+                        SizedBox(width: 24),
+                        SizedBox.square(dimension: 24, child: Placeholder()),
+                        SizedBox(width: 8),
+                        Text('OBS Studio'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),
