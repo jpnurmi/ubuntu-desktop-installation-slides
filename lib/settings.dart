@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:window_manager/window_manager.dart';
 import 'package:yaru_icons/yaru_icons.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
+
+const kCompactSize = Size(800, 600);
+const kNormalSize = Size(960, 680);
 
 class SettingsProvider extends StatelessWidget {
   const SettingsProvider({super.key, required this.child});
@@ -29,7 +33,6 @@ class _SettingsButtonState extends State<SettingsButton> {
 
   @override
   Widget build(BuildContext context) {
-    final settings = Settings.of(context).value;
     return MenuAnchor(
       controller: _controller,
       crossAxisUnconstrained: false,
@@ -39,15 +42,22 @@ class _SettingsButtonState extends State<SettingsButton> {
       menuChildren: [
         CheckboxMenuButton(
           value: Theme.of(context).brightness == Brightness.dark,
-          onChanged: (value) => Settings.of(context).value = settings.copyWith(
+          onChanged: (value) => Settings.apply(context,
               theme: value == true ? ThemeMode.dark : ThemeMode.light),
           child: const Text('Dark'),
         ),
         CheckboxMenuButton(
           value: Settings.gridOf(context),
-          onChanged: (value) =>
-              Settings.of(context).value = settings.copyWith(grid: value!),
+          onChanged: (value) => Settings.apply(context, grid: value!),
           child: const Text('Grid'),
+        ),
+        CheckboxMenuButton(
+          value: Settings.compactOf(context),
+          onChanged: (value) {
+            Settings.apply(context, compact: value!);
+            windowManager.setSize(value == true ? kCompactSize : kNormalSize);
+          },
+          child: const Text('Compact'),
         ),
       ],
       child: SizedBox.square(
@@ -68,23 +78,23 @@ class Settings {
   Settings({
     this.theme = ThemeMode.system,
     this.grid = false,
+    this.compact = false,
   });
 
   final ThemeMode theme;
   final bool grid;
+  final bool compact;
 
   Settings copyWith({
     ThemeMode? theme,
     bool? grid,
+    bool? compact,
   }) {
     return Settings(
       theme: theme ?? this.theme,
       grid: grid ?? this.grid,
+      compact: compact ?? this.compact,
     );
-  }
-
-  static ValueNotifier<Settings> of(BuildContext context) {
-    return context.read<ValueNotifier<Settings>>();
   }
 
   static ThemeMode themeOf(BuildContext context) {
@@ -95,12 +105,33 @@ class Settings {
     return context.select((ValueNotifier<Settings> s) => s.value.grid);
   }
 
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-    return other is Settings && other.theme == theme && other.grid == grid;
+  static bool compactOf(BuildContext context) {
+    return context.select((ValueNotifier<Settings> s) => s.value.compact);
+  }
+
+  static void apply(
+    BuildContext context, {
+    ThemeMode? theme,
+    bool? grid,
+    bool? compact,
+  }) {
+    final settings = context.read<ValueNotifier<Settings>>();
+    settings.value = settings.value.copyWith(
+      theme: theme,
+      grid: grid,
+      compact: compact,
+    );
   }
 
   @override
-  int get hashCode => Object.hash(theme, grid);
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    return other is Settings &&
+        other.theme == theme &&
+        other.grid == grid &&
+        other.compact == compact;
+  }
+
+  @override
+  int get hashCode => Object.hash(theme, grid, compact);
 }
