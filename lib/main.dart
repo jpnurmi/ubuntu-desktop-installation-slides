@@ -47,6 +47,56 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final rows = [
+      TableRow(
+        children: [
+          const Padding(
+            padding: EdgeInsetsDirectional.only(bottom: 16, end: 40),
+            child: Text('Included:'),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 16),
+            child: Row(
+              children: const [
+                SizedBox.square(
+                  dimension: 24,
+                  child: Placeholder(),
+                ),
+                SizedBox(width: 8),
+                Text('FeralGameMode'),
+              ],
+            ),
+          ),
+        ],
+      ),
+      TableRow(
+        children: [
+          const Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 16, 40, 16),
+            child: Text('Available:'),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: Row(
+              children: const [
+                SizedBox.square(dimension: 24, child: Placeholder()),
+                SizedBox(width: 8),
+                Text('Steam'),
+                SizedBox(width: 24),
+                SizedBox.square(dimension: 24, child: Placeholder()),
+                SizedBox(width: 8),
+                Text('Discord'),
+                SizedBox(width: 24),
+                SizedBox.square(dimension: 24, child: Placeholder()),
+                SizedBox(width: 8),
+                Text('OBS Studio'),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ];
+
     return Scaffold(
       extendBody: true,
       extendBodyBehindAppBar: true,
@@ -69,55 +119,13 @@ class _MyHomePageState extends State<MyHomePage> {
             tagline: 'Enhance your creativity',
             introduction:
                 'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.',
-            rows: [
-              TableRow(
-                children: [
-                  const Padding(
-                    padding: EdgeInsetsDirectional.only(bottom: 16, end: 40),
-                    child: Text('Included:'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: Row(
-                      children: const [
-                        SizedBox.square(
-                          dimension: 24,
-                          child: Placeholder(),
-                        ),
-                        SizedBox(width: 8),
-                        Text('FeralGameMode'),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              TableRow(
-                children: [
-                  const Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 16, 40, 16),
-                    child: Text('Available:'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    child: Row(
-                      children: const [
-                        SizedBox.square(dimension: 24, child: Placeholder()),
-                        SizedBox(width: 8),
-                        Text('Steam'),
-                        SizedBox(width: 24),
-                        SizedBox.square(dimension: 24, child: Placeholder()),
-                        SizedBox(width: 8),
-                        Text('Discord'),
-                        SizedBox(width: 24),
-                        SizedBox.square(dimension: 24, child: Placeholder()),
-                        SizedBox(width: 8),
-                        Text('OBS Studio'),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ],
+            rows: rows,
+          ),
+          SlideLayout2(
+            tagline: 'Enhance your creativity',
+            introduction:
+                'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.',
+            rows: rows,
           ),
         ],
       ),
