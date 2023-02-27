@@ -241,3 +241,74 @@ class SlideLayout3 extends StatelessWidget {
     );
   }
 }
+
+class SlideLayout4 extends StatelessWidget {
+  const SlideLayout4({
+    super.key,
+    required this.tagline,
+    required this.introduction,
+    required this.rows,
+  });
+
+  final String tagline;
+  final String introduction;
+  final List<Widget> rows;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Spacer(flex: 1),
+        Expanded(
+          flex: 2,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Spacer(flex: 1),
+              Expanded(
+                flex: 11,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      tagline,
+                      style: Theme.of(context).textTheme.headlineLarge,
+                    ),
+                    const SizedBox(height: 16),
+                    Expanded(child: Text(introduction)),
+                  ],
+                ),
+              ),
+              const Spacer(flex: 1),
+              Expanded(
+                flex: 11,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    const Expanded(child: Placeholder()),
+                    const SizedBox(height: 32),
+                    for (final row in rows)
+                      Padding(
+                        padding: const EdgeInsets.all(4),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('\u2022'),
+                            const SizedBox(width: 4),
+                            row,
+                          ],
+                        ),
+                      ),
+                    const Spacer(),
+                  ],
+                ),
+              ),
+              const Spacer(flex: 1),
+            ],
+          ),
+        ),
+        const Spacer(flex: 1),
+      ],
+    );
+  }
+}
