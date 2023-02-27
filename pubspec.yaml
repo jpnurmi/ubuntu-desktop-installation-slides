@@ -1,0 +1,20 @@
+name: ubuntu_desktop_installation_slides
+publish_to: 'none'
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  handy_window: ^0.3.1
+  provider: ^6.0.5
+  yaru: ^0.5.5
+  yaru_icons: ^1.0.3
+  yaru_widgets: ^2.1.1
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
