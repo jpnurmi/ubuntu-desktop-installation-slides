@@ -127,6 +127,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.',
             rows: rows,
           ),
+          SlideLayout3(
+            tagline: 'Enhance your creativity',
+            introduction:
+                'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.',
+            rows: rows,
+          ),
         ],
       ),
       bottomNavigationBar: BottomBar(
