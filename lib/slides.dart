@@ -135,9 +135,8 @@ class SlideLayout2 extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Spacer(flex: 1),
               const Expanded(
-                flex: 8,
+                flex: 9,
                 child: Placeholder(),
               ),
               const Spacer(flex: 1),
