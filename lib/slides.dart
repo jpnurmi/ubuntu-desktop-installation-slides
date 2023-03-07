@@ -14,6 +14,7 @@ class SlideLayout0 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         const Spacer(flex: 1),
         Expanded(
@@ -256,6 +257,7 @@ class SlideLayout4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         const Spacer(flex: 1),
         Expanded(
