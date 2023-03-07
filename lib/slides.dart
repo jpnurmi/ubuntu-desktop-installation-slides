@@ -4,12 +4,12 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 class SlideLayout0 extends StatelessWidget {
   const SlideLayout0({
     super.key,
-    required this.tagline,
-    required this.introduction,
+    required this.title,
+    required this.body,
   });
 
-  final String tagline;
-  final String introduction;
+  final Widget title;
+  final Widget body;
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +26,12 @@ class SlideLayout0 extends StatelessWidget {
                 flex: 8,
                 child: Column(
                   children: [
-                    Text(
-                      tagline,
-                      style: Theme.of(context).textTheme.headlineLarge,
+                    DefaultTextStyle(
+                      style: Theme.of(context).textTheme.headlineLarge!,
+                      child: title,
                     ),
                     const SizedBox(height: 16),
-                    Text(introduction),
+                    body,
                   ],
                 ),
               ),
@@ -53,13 +53,13 @@ class SlideLayout0 extends StatelessWidget {
 class SlideLayout1 extends StatelessWidget {
   const SlideLayout1({
     super.key,
-    required this.tagline,
-    required this.introduction,
+    required this.title,
+    required this.body,
     required this.rows,
   });
 
-  final String tagline;
-  final String introduction;
+  final Widget title;
+  final Widget body;
   final List<TableRow> rows;
 
   @override
@@ -75,9 +75,9 @@ class SlideLayout1 extends StatelessWidget {
               const Spacer(flex: 1),
               Expanded(
                 flex: 8,
-                child: Text(
-                  tagline,
-                  style: Theme.of(context).textTheme.headlineLarge,
+                child: DefaultTextStyle(
+                  style: Theme.of(context).textTheme.headlineLarge!,
+                  child: title,
                 ),
               ),
               const Spacer(flex: 1),
@@ -86,7 +86,7 @@ class SlideLayout1 extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Text(introduction),
+                    body,
                     const SizedBox(height: 16),
                     const Expanded(child: Placeholder()),
                     const SizedBox(height: 16),
@@ -116,13 +116,13 @@ class SlideLayout1 extends StatelessWidget {
 class SlideLayout2 extends StatelessWidget {
   const SlideLayout2({
     super.key,
-    required this.tagline,
-    required this.introduction,
+    required this.title,
+    required this.body,
     required this.rows,
   });
 
-  final String tagline;
-  final String introduction;
+  final Widget title;
+  final Widget body;
   final List<TableRow> rows;
 
   @override
@@ -146,12 +146,12 @@ class SlideLayout2 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const Spacer(flex: 1),
-                    Text(
-                      tagline,
-                      style: Theme.of(context).textTheme.headlineLarge,
+                    DefaultTextStyle(
+                      style: Theme.of(context).textTheme.headlineLarge!,
+                      child: title,
                     ),
                     const SizedBox(height: 16),
-                    Text(introduction),
+                    body,
                     const SizedBox(height: 16),
                     Table(
                       border: TableBorder(
@@ -179,13 +179,13 @@ class SlideLayout2 extends StatelessWidget {
 class SlideLayout3 extends StatelessWidget {
   const SlideLayout3({
     super.key,
-    required this.tagline,
-    required this.introduction,
+    required this.title,
+    required this.body,
     required this.rows,
   });
 
-  final String tagline;
-  final String introduction;
+  final Widget title;
+  final Widget body;
   final List<TableRow> rows;
 
   @override
@@ -205,9 +205,9 @@ class SlideLayout3 extends StatelessWidget {
               const Spacer(flex: 1),
               Expanded(
                 flex: 8,
-                child: Text(
-                  tagline,
-                  style: Theme.of(context).textTheme.headlineLarge,
+                child: DefaultTextStyle(
+                  style: Theme.of(context).textTheme.headlineLarge!,
+                  child: title,
                 ),
               ),
               const Spacer(flex: 1),
@@ -217,7 +217,7 @@ class SlideLayout3 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const SizedBox(height: 16),
-                    Text(introduction),
+                    body,
                     const SizedBox(height: 16),
                     Table(
                       border: TableBorder(
@@ -244,13 +244,13 @@ class SlideLayout3 extends StatelessWidget {
 class SlideLayout4 extends StatelessWidget {
   const SlideLayout4({
     super.key,
-    required this.tagline,
-    required this.introduction,
+    required this.title,
+    required this.body,
     required this.rows,
   });
 
-  final String tagline;
-  final String introduction;
+  final Widget title;
+  final Widget body;
   final List<Widget> rows;
 
   @override
@@ -269,12 +269,12 @@ class SlideLayout4 extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Text(
-                      tagline,
-                      style: Theme.of(context).textTheme.headlineLarge,
+                    DefaultTextStyle(
+                      style: Theme.of(context).textTheme.headlineLarge!,
+                      child: title,
                     ),
                     const SizedBox(height: 16),
-                    Expanded(child: Text(introduction)),
+                    Expanded(child: body),
                   ],
                 ),
               ),

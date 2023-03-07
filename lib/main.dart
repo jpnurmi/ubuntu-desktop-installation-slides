@@ -100,32 +100,32 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final slides = [
       const SlideLayout0(
-        tagline: 'Fast, free and full of new features',
-        introduction:
-            'The latest version of Ubuntu makes computing easier than ever. Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in Ubuntu 23.04',
+        title: Text('Fast, free and full of new features'),
+        body: Text(
+            'The latest version of Ubuntu makes computing easier than ever. Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in Ubuntu 23.04'),
       ),
       SlideLayout1(
-        tagline: 'Enhance your creativity',
-        introduction:
-            'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.',
+        title: const Text('Enhance your creativity'),
+        body: const Text(
+            'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.'),
         rows: rows,
       ),
       SlideLayout2(
-        tagline: 'Enhance your creativity',
-        introduction:
-            'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.',
+        title: const Text('Enhance your creativity'),
+        body: const Text(
+            'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.'),
         rows: rows,
       ),
       SlideLayout3(
-        tagline: 'Enhance your creativity',
-        introduction:
-            'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.',
+        title: const Text('Enhance your creativity'),
+        body: const Text(
+            'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.'),
         rows: rows,
       ),
       const SlideLayout4(
-        tagline: 'Help & Support',
-        introduction:
-            'The official Ubuntu documentation is available both online and via the Help icon in the dock.\n\nAsk Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.\n\nFor enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.',
+        title: Text('Help & Support'),
+        body: Text(
+            'The official Ubuntu documentation is available both online and via the Help icon in the dock.\n\nAsk Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.\n\nFor enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.'),
         rows: [
           Text('Official documentation'),
           Text('Ask Ubuntu'),
