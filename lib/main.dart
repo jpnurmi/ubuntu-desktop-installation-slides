@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 import 'bottom_bar.dart';
 import 'grid.dart';
+import 'l10n.dart';
 import 'settings.dart';
 import 'slides.dart';
 import 'transitions.dart';
@@ -24,6 +26,8 @@ class MyApp extends StatelessWidget {
             darkTheme: yaru.darkTheme,
             debugShowCheckedModeBanner: false,
             themeMode: Settings.themeOf(context),
+            supportedLocales: AppLocalizations.supportedLocales,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
             builder: (context, child) => Stack(
                   children: [
                     child!,
@@ -98,39 +102,71 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     ];
 
+    const flavor = 'Ubuntu';
+    const product = 'Ubuntu XX.XX';
+
     final slides = [
-      const SlideLayout0(
-        title: Text('Fast, free and full of new features'),
-        body: Text(
-            'The latest version of Ubuntu makes computing easier than ever. Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in Ubuntu 23.04'),
+      SlideLayout0(
+        title: Text(context.l10n.welcomeSlideTitle),
+        body: Column(
+          children: [
+            Text(context.l10n.welcomeSlideHeader(flavor)),
+            const SizedBox(height: 16),
+            Text(context.l10n.welcomeSlideBody(product)),
+          ],
+        ),
       ),
-      SlideLayout1(
-        title: const Text('Enhance your creativity'),
-        body: const Text(
-            'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.'),
+      SlideLayout3(
+        title: Text(context.l10n.applicationSlideTitle),
+        body: Text(context.l10n.applicationSlideBody(flavor)),
         rows: rows,
       ),
       SlideLayout2(
-        title: const Text('Enhance your creativity'),
-        body: const Text(
-            'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.'),
+        title: Text(context.l10n.developmentSlideTitle),
+        body: Text(context.l10n.developmentSlideBody(flavor)),
+        rows: rows,
+      ),
+      SlideLayout1(
+        title: Text(context.l10n.creativitySlideTitle),
+        body: Text(context.l10n.creativitySlideBody(flavor)),
         rows: rows,
       ),
       SlideLayout3(
-        title: const Text('Enhance your creativity'),
-        body: const Text(
-            'Ubuntu supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on Ubuntu via applications like Steam with no additional configuration.'),
+        title: Text(context.l10n.gamingSlideTitle),
+        body: Text(context.l10n.gamingSlideBody(flavor)),
         rows: rows,
       ),
-      const SlideLayout4(
-        title: Text('Help & Support'),
-        body: Text(
-            'The official Ubuntu documentation is available both online and via the Help icon in the dock.\n\nAsk Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.\n\nFor enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.'),
+      SlideLayout1(
+        title: Text(context.l10n.securitySlideTitle),
+        body: Text(context.l10n.securitySlideBody(flavor)),
+        rows: rows,
+      ),
+      SlideLayout3(
+        title: Text(context.l10n.productivitySlideTitle),
+        body: Text(context.l10n.productivitySlideBody(flavor)),
+        rows: rows,
+      ),
+      SlideLayout2(
+        title: Text(context.l10n.accessibilitySlideTitle),
+        body: Text(context.l10n.accessibilitySlideBody(flavor)),
+        rows: rows,
+      ),
+      SlideLayout4(
+        title: Text(context.l10n.supportSlideTitle),
+        body: Column(
+          children: [
+            Text(context.l10n.supportSlideHeader(flavor)),
+            const SizedBox(height: 16),
+            Text(context.l10n.supportSlideCommunity),
+            const SizedBox(height: 16),
+            Text(context.l10n.supportSlideEnterprise),
+          ],
+        ),
         rows: [
-          Text('Official documentation'),
-          Text('Ask Ubuntu'),
-          Text('Ubuntu Discourse'),
-          Text('Enterprise-grade 24/7 support\nwith Ubuntu Pro'),
+          Text(context.l10n.supportSlideDocumentation),
+          const Text('Ask Ubuntu'),
+          const Text('Ubuntu Discourse'),
+          Text(context.l10n.supportSlideUbuntuPro),
         ],
       ),
     ];

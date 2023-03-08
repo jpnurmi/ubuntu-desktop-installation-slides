@@ -1,0 +1,97 @@
+{
+  "installationSlidesAvailable": "Available",
+  "installationSlidesIncluded": "Included",
+  "welcomeSlideTitle": "Fast, free and full of new features",
+  "welcomeSlideHeader": "The latest version of {DISTRO} makes computing easier than ever.",
+  "@welcomeSlideHeader": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "welcomeSlideBody": "Whether you're a developer, creator, gamer or administrator you'll find new tools to improve your productivity and enhance your experience in {RELEASE}.",
+  "@welcomeSlideBody": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "applicationSlideTitle": "All the applications you need",
+  "applicationSlideBody": "Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and {DISTRO} archive.",
+  "@applicationSlideBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "developmentSlideTitle": "Develop with the best of open source",
+  "developmentSlideBody": "{DISTRO} is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every {DISTRO} release includes the latest toolchains and supports all major IDEs.",
+  "@developmentSlideBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "creativitySlideTitle": "Enhance your creativity",
+  "creativitySlideBody": "If you're an animator, designer, video creator or game developer it's easy to bring your workflows to {DISTRO} with support for open source and industry standard software and applications.",
+  "@creativitySlideBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "gamingSlideTitle": "Great for gaming",
+  "gamingSlideBody": "{DISTRO} supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on {DISTRO} via applications like Steam with no additional configuration.",
+  "@gamingSlideBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "securitySlideTitle": "Private and secure",
+  "securitySlideBody": "{DISTRO} provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.",
+  "@securitySlideBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "securitySlideLts": "All {DISTRO} LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.",
+  "@securitySlideLts": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "productivitySlideTitle": "Power up your productivity",
+  "productivitySlideBody": "{DISTRO} Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.",
+  "@productivitySlideBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "accessibilitySlideTitle": "Access for everyone",
+  "accessibilitySlideBody": "At the heart of the {DISTRO} philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, {DISTRO} makes computing easy - whoever and wherever you are.",
+  "@accessibilitySlideBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "supportSlideTitle": "Help & Support",
+  "supportSlideHeader": "The official {DISTRO} documentation is available both online and via the Help icon in the dock.",
+  "@supportSlideHeader": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "supportSlideCommunity": "Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.",
+  "supportSlideEnterprise": "For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.",
+  "supportSlideResources": "Helpful resources:",
+  "supportSlideDocumentation": "Official documentation",
+  "supportSlideAskUbuntu": "Ask Ubuntu",
+  "supportSlideUbuntuDiscourse": "Ubuntu Discourse",
+  "supportSlideUbuntuPro": "Enterprise-grade 24/7 support with Ubuntu Pro"
+}
