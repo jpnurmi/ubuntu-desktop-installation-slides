@@ -97,7 +97,8 @@ class SlideLayout1 extends StatelessWidget {
                       ),
                       columnWidths: const {0: IntrinsicColumnWidth()},
                       defaultVerticalAlignment:
-                          TableCellVerticalAlignment.middle,
+                          TableCellVerticalAlignment.baseline,
+                      textBaseline: TextBaseline.alphabetic,
                       children: rows,
                     ),
                     const SizedBox(height: 16),
@@ -160,7 +161,8 @@ class SlideLayout2 extends StatelessWidget {
                       ),
                       columnWidths: const {0: IntrinsicColumnWidth()},
                       defaultVerticalAlignment:
-                          TableCellVerticalAlignment.middle,
+                          TableCellVerticalAlignment.baseline,
+                      textBaseline: TextBaseline.alphabetic,
                       children: rows,
                     ),
                     const Spacer(flex: 2),
@@ -226,7 +228,8 @@ class SlideLayout3 extends StatelessWidget {
                       ),
                       columnWidths: const {0: IntrinsicColumnWidth()},
                       defaultVerticalAlignment:
-                          TableCellVerticalAlignment.middle,
+                          TableCellVerticalAlignment.baseline,
+                      textBaseline: TextBaseline.alphabetic,
                       children: rows,
                     ),
                   ],
