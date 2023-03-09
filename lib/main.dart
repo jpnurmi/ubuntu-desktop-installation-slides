@@ -82,19 +82,34 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16),
-            child: Row(
-              children: const [
-                SizedBox.square(dimension: 24, child: Placeholder()),
-                SizedBox(width: 8),
-                Text('Steam'),
-                SizedBox(width: 24),
-                SizedBox.square(dimension: 24, child: Placeholder()),
-                SizedBox(width: 8),
-                Text('Discord'),
-                SizedBox(width: 24),
-                SizedBox.square(dimension: 24, child: Placeholder()),
-                SizedBox(width: 8),
-                Text('OBS Studio'),
+            child: Wrap(
+              spacing: 24,
+              runSpacing: 24,
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    SizedBox.square(dimension: 24, child: Placeholder()),
+                    SizedBox(width: 8),
+                    Text('Steam'),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    SizedBox.square(dimension: 24, child: Placeholder()),
+                    SizedBox(width: 8),
+                    Text('Discord'),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    SizedBox.square(dimension: 24, child: Placeholder()),
+                    SizedBox(width: 8),
+                    Text('OBS Studio'),
+                  ],
+                ),
               ],
             ),
           ),
