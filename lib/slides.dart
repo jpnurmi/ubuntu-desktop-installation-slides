@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-TextStyle _titleStyle(BuildContext context) {
+TextStyle _headlineStyle(BuildContext context) {
   return TextStyle(
     fontSize: 36,
     fontWeight: FontWeight.w300,
@@ -21,12 +21,12 @@ TextStyle _bodyStyle(BuildContext context) {
 class SlideLayout0 extends StatelessWidget {
   const SlideLayout0({
     super.key,
-    required this.title,
+    required this.headline,
     required this.body,
     required this.image,
   });
 
-  final Widget title;
+  final Widget headline;
   final Widget body;
   final Widget image;
 
@@ -47,8 +47,8 @@ class SlideLayout0 extends StatelessWidget {
                 child: Column(
                   children: [
                     DefaultTextStyle(
-                      style: _titleStyle(context).copyWith(fontSize: 30),
-                      child: title,
+                      style: _headlineStyle(context).copyWith(fontSize: 30),
+                      child: headline,
                     ),
                     const SizedBox(height: 16),
                     DefaultTextStyle(
@@ -76,13 +76,13 @@ class SlideLayout0 extends StatelessWidget {
 class SlideLayout1 extends StatelessWidget {
   const SlideLayout1({
     super.key,
-    required this.title,
+    required this.headline,
     required this.body,
     required this.image,
     required this.rows,
   });
 
-  final Widget title;
+  final Widget headline;
   final Widget body;
   final Widget image;
   final List<TableRow> rows;
@@ -101,8 +101,8 @@ class SlideLayout1 extends StatelessWidget {
               Expanded(
                 flex: 8,
                 child: DefaultTextStyle(
-                  style: _titleStyle(context),
-                  child: title,
+                  style: _headlineStyle(context),
+                  child: headline,
                 ),
               ),
               const Spacer(flex: 1),
@@ -145,13 +145,13 @@ class SlideLayout1 extends StatelessWidget {
 class SlideLayout2 extends StatelessWidget {
   const SlideLayout2({
     super.key,
-    required this.title,
+    required this.headline,
     required this.body,
     required this.image,
     required this.rows,
   });
 
-  final Widget title;
+  final Widget headline;
   final Widget body;
   final Widget image;
   final List<TableRow> rows;
@@ -178,8 +178,8 @@ class SlideLayout2 extends StatelessWidget {
                   children: [
                     const Spacer(flex: 1),
                     DefaultTextStyle(
-                      style: _titleStyle(context),
-                      child: title,
+                      style: _headlineStyle(context),
+                      child: headline,
                     ),
                     const SizedBox(height: 16),
                     DefaultTextStyle(
@@ -214,13 +214,13 @@ class SlideLayout2 extends StatelessWidget {
 class SlideLayout3 extends StatelessWidget {
   const SlideLayout3({
     super.key,
-    required this.title,
+    required this.headline,
     required this.body,
     required this.image,
     required this.rows,
   });
 
-  final Widget title;
+  final Widget headline;
   final Widget body;
   final Widget image;
   final List<TableRow> rows;
@@ -241,8 +241,8 @@ class SlideLayout3 extends StatelessWidget {
               Expanded(
                 flex: 8,
                 child: DefaultTextStyle(
-                  style: _titleStyle(context),
-                  child: title,
+                  style: _headlineStyle(context),
+                  child: headline,
                 ),
               ),
               const Spacer(flex: 1),
@@ -283,13 +283,13 @@ class SlideLayout3 extends StatelessWidget {
 class SlideLayout4 extends StatelessWidget {
   const SlideLayout4({
     super.key,
-    required this.title,
+    required this.headline,
     required this.body,
     required this.image,
     required this.rows,
   });
 
-  final Widget title;
+  final Widget headline;
   final Widget body;
   final Widget image;
   final List<Widget> rows;
@@ -312,8 +312,8 @@ class SlideLayout4 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     DefaultTextStyle(
-                      style: _titleStyle(context),
-                      child: title,
+                      style: _headlineStyle(context),
+                      child: headline,
                     ),
                     const SizedBox(height: 16),
                     Expanded(

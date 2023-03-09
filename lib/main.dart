@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final slides = [
       SlideLayout0(
-        title: Text(context.l10n.welcomeSlideTitle),
+        headline: Text(context.l10n.welcomeSlideTitle),
         body: Column(
           children: [
             Text(context.l10n.welcomeSlideHeader(flavor)),
@@ -133,49 +133,49 @@ class _MyHomePageState extends State<MyHomePage> {
         image: const Placeholder(),
       ),
       SlideLayout3(
-        title: Text(context.l10n.applicationSlideTitle),
+        headline: Text(context.l10n.applicationSlideTitle),
         body: Text(context.l10n.applicationSlideBody(flavor)),
         image: const Placeholder(),
         rows: rows,
       ),
       SlideLayout2(
-        title: Text(context.l10n.developmentSlideTitle),
+        headline: Text(context.l10n.developmentSlideTitle),
         body: Text(context.l10n.developmentSlideBody(flavor)),
         image: const Placeholder(),
         rows: rows,
       ),
       SlideLayout1(
-        title: Text(context.l10n.creativitySlideTitle),
+        headline: Text(context.l10n.creativitySlideTitle),
         body: Text(context.l10n.creativitySlideBody(flavor)),
         image: const Placeholder(),
         rows: rows,
       ),
       SlideLayout3(
-        title: Text(context.l10n.gamingSlideTitle),
+        headline: Text(context.l10n.gamingSlideTitle),
         body: Text(context.l10n.gamingSlideBody(flavor)),
         image: const Placeholder(),
         rows: rows,
       ),
       SlideLayout1(
-        title: Text(context.l10n.securitySlideTitle),
+        headline: Text(context.l10n.securitySlideTitle),
         body: Text(context.l10n.securitySlideBody(flavor)),
         image: const Placeholder(),
         rows: rows,
       ),
       SlideLayout3(
-        title: Text(context.l10n.productivitySlideTitle),
+        headline: Text(context.l10n.productivitySlideTitle),
         body: Text(context.l10n.productivitySlideBody(flavor)),
         image: const Placeholder(),
         rows: rows,
       ),
       SlideLayout2(
-        title: Text(context.l10n.accessibilitySlideTitle),
+        headline: Text(context.l10n.accessibilitySlideTitle),
         body: Text(context.l10n.accessibilitySlideBody(flavor)),
         image: const Placeholder(),
         rows: rows,
       ),
       SlideLayout4(
-        title: Text(context.l10n.supportSlideTitle),
+        headline: Text(context.l10n.supportSlideTitle),
         body: Column(
           children: [
             Text(context.l10n.supportSlideHeader(flavor)),
