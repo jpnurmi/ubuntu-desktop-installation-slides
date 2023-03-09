@@ -1,15 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+TextStyle _titleStyle(BuildContext context) {
+  return TextStyle(
+    fontSize: 36,
+    fontWeight: FontWeight.w300,
+    color: Theme.of(context).colorScheme.onSurface,
+  );
+}
+
+TextStyle _bodyStyle(BuildContext context) {
+  return TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
+    height: 1.5,
+    color: Theme.of(context).colorScheme.onSurface,
+  );
+}
+
 class SlideLayout0 extends StatelessWidget {
   const SlideLayout0({
     super.key,
     required this.title,
     required this.body,
+    required this.image,
   });
 
   final Widget title;
   final Widget body;
+  final Widget image;
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +47,14 @@ class SlideLayout0 extends StatelessWidget {
                 child: Column(
                   children: [
                     DefaultTextStyle(
-                      style: Theme.of(context).textTheme.headlineLarge!,
+                      style: _titleStyle(context).copyWith(fontSize: 30),
                       child: title,
                     ),
                     const SizedBox(height: 16),
-                    body,
+                    DefaultTextStyle(
+                      style: _bodyStyle(context),
+                      child: body,
+                    ),
                   ],
                 ),
               ),
@@ -77,7 +99,7 @@ class SlideLayout1 extends StatelessWidget {
               Expanded(
                 flex: 8,
                 child: DefaultTextStyle(
-                  style: Theme.of(context).textTheme.headlineLarge!,
+                  style: _titleStyle(context),
                   child: title,
                 ),
               ),
@@ -87,7 +109,10 @@ class SlideLayout1 extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    body,
+                    DefaultTextStyle(
+                      style: _bodyStyle(context),
+                      child: body,
+                    ),
                     const SizedBox(height: 16),
                     const Expanded(child: Placeholder()),
                     const SizedBox(height: 16),
@@ -149,11 +174,14 @@ class SlideLayout2 extends StatelessWidget {
                   children: [
                     const Spacer(flex: 1),
                     DefaultTextStyle(
-                      style: Theme.of(context).textTheme.headlineLarge!,
+                      style: _titleStyle(context),
                       child: title,
                     ),
                     const SizedBox(height: 16),
-                    body,
+                    DefaultTextStyle(
+                      style: _bodyStyle(context),
+                      child: body,
+                    ),
                     const SizedBox(height: 16),
                     Table(
                       border: TableBorder(
@@ -209,7 +237,7 @@ class SlideLayout3 extends StatelessWidget {
               Expanded(
                 flex: 8,
                 child: DefaultTextStyle(
-                  style: Theme.of(context).textTheme.headlineLarge!,
+                  style: _titleStyle(context),
                   child: title,
                 ),
               ),
@@ -220,7 +248,10 @@ class SlideLayout3 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const SizedBox(height: 16),
-                    body,
+                    DefaultTextStyle(
+                      style: _bodyStyle(context),
+                      child: body,
+                    ),
                     const SizedBox(height: 16),
                     Table(
                       border: TableBorder(
@@ -275,11 +306,16 @@ class SlideLayout4 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     DefaultTextStyle(
-                      style: Theme.of(context).textTheme.headlineLarge!,
+                      style: _titleStyle(context),
                       child: title,
                     ),
                     const SizedBox(height: 16),
-                    Expanded(child: body),
+                    Expanded(
+                      child: DefaultTextStyle(
+                        style: _bodyStyle(context),
+                        child: body,
+                      ),
+                    ),
                   ],
                 ),
               ),
