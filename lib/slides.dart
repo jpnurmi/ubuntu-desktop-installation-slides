@@ -59,9 +59,9 @@ class SlideLayout0 extends StatelessWidget {
                 ),
               ),
               const Spacer(flex: 1),
-              const Expanded(
+              Expanded(
                 flex: 8,
-                child: Placeholder(),
+                child: image,
               ),
               const Spacer(flex: 4),
             ],
@@ -78,11 +78,13 @@ class SlideLayout1 extends StatelessWidget {
     super.key,
     required this.title,
     required this.body,
+    required this.image,
     required this.rows,
   });
 
   final Widget title;
   final Widget body;
+  final Widget image;
   final List<TableRow> rows;
 
   @override
@@ -114,7 +116,7 @@ class SlideLayout1 extends StatelessWidget {
                       child: body,
                     ),
                     const SizedBox(height: 16),
-                    const Expanded(child: Placeholder()),
+                    Expanded(child: image),
                     const SizedBox(height: 16),
                     Table(
                       border: TableBorder(
@@ -145,11 +147,13 @@ class SlideLayout2 extends StatelessWidget {
     super.key,
     required this.title,
     required this.body,
+    required this.image,
     required this.rows,
   });
 
   final Widget title;
   final Widget body;
+  final Widget image;
   final List<TableRow> rows;
 
   @override
@@ -162,9 +166,9 @@ class SlideLayout2 extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Expanded(
+              Expanded(
                 flex: 9,
-                child: Placeholder(),
+                child: image,
               ),
               const Spacer(flex: 1),
               Expanded(
@@ -212,11 +216,13 @@ class SlideLayout3 extends StatelessWidget {
     super.key,
     required this.title,
     required this.body,
+    required this.image,
     required this.rows,
   });
 
   final Widget title;
   final Widget body;
+  final Widget image;
   final List<TableRow> rows;
 
   @override
@@ -225,9 +231,7 @@ class SlideLayout3 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         const SizedBox(height: kYaruTitleBarHeight + 8),
-        const Expanded(
-          child: Placeholder(),
-        ),
+        Expanded(child: image),
         const SizedBox(height: 16),
         Expanded(
           child: Row(
@@ -281,11 +285,13 @@ class SlideLayout4 extends StatelessWidget {
     super.key,
     required this.title,
     required this.body,
+    required this.image,
     required this.rows,
   });
 
   final Widget title;
   final Widget body;
+  final Widget image;
   final List<Widget> rows;
 
   @override
@@ -325,7 +331,7 @@ class SlideLayout4 extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    const Expanded(child: Placeholder()),
+                    Expanded(child: image),
                     const SizedBox(height: 32),
                     for (final row in rows)
                       Padding(
