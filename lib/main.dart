@@ -10,44 +10,41 @@ import 'settings.dart';
 import 'slides.dart';
 import 'transitions.dart';
 
-void main() {
-  runApp(const SettingsProvider(child: MyApp()));
-}
+void main() => runApp(const SettingsProvider(child: SlidesApp()));
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SlidesApp extends StatelessWidget {
+  const SlidesApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return YaruTheme(
-      builder: (context, yaru, child) {
-        return MaterialApp(
-            theme: yaru.theme,
-            darkTheme: yaru.darkTheme,
-            debugShowCheckedModeBanner: false,
-            themeMode: Settings.themeOf(context),
-            supportedLocales: AppLocalizations.supportedLocales,
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
-            builder: (context, child) => Stack(
-                  children: [
-                    child!,
-                    const LayoutGrid(),
-                  ],
-                ),
-            home: const MyHomePage());
-      },
+      builder: (context, yaru, child) => MaterialApp(
+        theme: yaru.theme,
+        darkTheme: yaru.darkTheme,
+        debugShowCheckedModeBanner: false,
+        themeMode: Settings.themeOf(context),
+        supportedLocales: AppLocalizations.supportedLocales,
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        builder: (context, child) => Stack(
+          children: [
+            child!,
+            const LayoutGrid(),
+          ],
+        ),
+        home: const SlidesPage(),
+      ),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class SlidesPage extends StatefulWidget {
+  const SlidesPage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<SlidesPage> createState() => _SlidesPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SlidesPageState extends State<SlidesPage> {
   var _index = 0;
 
   @override
