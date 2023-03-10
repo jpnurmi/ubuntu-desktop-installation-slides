@@ -53,23 +53,17 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final rows = [
-      TableRow(
+      const TableRow(
         children: [
-          const Padding(
+          Padding(
             padding: EdgeInsetsDirectional.only(bottom: 16, end: 40),
             child: Text('Included:'),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 16),
-            child: Row(
-              children: const [
-                SizedBox.square(
-                  dimension: 24,
-                  child: Placeholder(),
-                ),
-                SizedBox(width: 8),
-                Text('FeralGameMode'),
-              ],
+            padding: EdgeInsets.only(bottom: 16),
+            child: SlideLabel(
+              icon: Placeholder(),
+              label: Text('FeralGameMode'),
             ),
           ),
         ],
@@ -85,30 +79,18 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Wrap(
               spacing: 24,
               runSpacing: 24,
-              children: [
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const [
-                    SizedBox.square(dimension: 24, child: Placeholder()),
-                    SizedBox(width: 8),
-                    Text('Steam'),
-                  ],
+              children: const [
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Steam'),
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const [
-                    SizedBox.square(dimension: 24, child: Placeholder()),
-                    SizedBox(width: 8),
-                    Text('Discord'),
-                  ],
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Discord'),
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const [
-                    SizedBox.square(dimension: 24, child: Placeholder()),
-                    SizedBox(width: 8),
-                    Text('OBS Studio'),
-                  ],
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('OBS Studio'),
                 ),
               ],
             ),
