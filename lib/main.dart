@@ -306,10 +306,22 @@ class _MyHomePageState extends State<MyHomePage> {
         image: const Placeholder(),
         list: SlideList(
           children: [
-            Text(context.l10n.supportSlideDocumentation),
-            const Text('Ask Ubuntu'),
-            const Text('Ubuntu Discourse'),
-            Text(context.l10n.supportSlideUbuntuPro),
+            SlideLink(
+              text: context.l10n.supportSlideDocumentation,
+              url: 'https://help.ubuntu.com/',
+            ),
+            const SlideLink(
+              text: 'Ask Ubuntu',
+              url: 'https://askubuntu.com/',
+            ),
+            const SlideLink(
+              text: 'Ubuntu Discourse',
+              url: 'https://discourse.ubuntu.com/',
+            ),
+            SlideLink(
+              text: context.l10n.supportSlideUbuntuPro,
+              url: 'https://ubuntu.com/pro',
+            ),
           ],
         ),
       ),

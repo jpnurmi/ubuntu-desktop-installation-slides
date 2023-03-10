@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
+import 'package:yaru_colors/yaru_colors.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 TextStyle _headlineStyle(BuildContext context) {
@@ -16,6 +18,34 @@ TextStyle _bodyStyle(BuildContext context) {
     height: 1.5,
     color: Theme.of(context).colorScheme.onSurface,
   );
+}
+
+Map<String, Style> _linkStyle(BuildContext context) {
+  return {
+    'body': Style(margin: Margins.zero),
+    'a': Style(
+      color: Theme.of(context).brightness == Brightness.light
+          ? YaruColors.blue[700]!
+          : YaruColors.blue[500]!,
+    ),
+  };
+}
+
+class SlideLink extends StatelessWidget {
+  const SlideLink({super.key, required this.text, required this.url});
+
+  final String text;
+  final String url;
+
+  @override
+  Widget build(BuildContext context) {
+    return Html(
+      data: '<a href="$url">$text</a>',
+      shrinkWrap: true,
+      style: _linkStyle(context),
+      onAnchorTap: (url, _, __, ___) => debugPrint('TODO: launch $url'),
+    );
+  }
 }
 
 class SlideLabel extends StatelessWidget {
