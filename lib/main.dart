@@ -58,10 +58,9 @@ class _MyHomePageState extends State<MyHomePage> {
     final slides = [
       SlideLayout0(
         headline: Text(context.l10n.welcomeSlideTitle),
-        body: Column(
+        body: SlideColumn(
           children: [
             Text(context.l10n.welcomeSlideHeader(flavor)),
-            const SizedBox(height: 16),
             Text(context.l10n.welcomeSlideBody(product)),
           ],
         ),
@@ -294,12 +293,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       SlideLayout4(
         headline: Text(context.l10n.supportSlideTitle),
-        body: Column(
+        body: SlideColumn(
           children: [
             Text(context.l10n.supportSlideHeader(flavor)),
-            const SizedBox(height: 16),
             Text(context.l10n.supportSlideCommunity),
-            const SizedBox(height: 16),
             Text(context.l10n.supportSlideEnterprise),
           ],
         ),
