@@ -18,6 +18,52 @@ TextStyle _bodyStyle(BuildContext context) {
   );
 }
 
+class SlideTable extends StatelessWidget {
+  const SlideTable({super.key, required this.rows});
+
+  final List<TableRow> rows;
+
+  @override
+  Widget build(BuildContext context) {
+    return Table(
+      border: TableBorder(
+        horizontalInside: Divider.createBorderSide(context),
+      ),
+      columnWidths: const {0: IntrinsicColumnWidth()},
+      defaultVerticalAlignment: TableCellVerticalAlignment.baseline,
+      textBaseline: TextBaseline.alphabetic,
+      children: rows,
+    );
+  }
+}
+
+class SlideList extends StatelessWidget {
+  const SlideList({super.key, required this.children});
+
+  final List<Widget> children;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        for (final child in children)
+          Padding(
+            padding: const EdgeInsets.all(4),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('\u2022'),
+                const SizedBox(width: 4),
+                child,
+              ],
+            ),
+          ),
+      ],
+    );
+  }
+}
+
 class SlideLayout0 extends StatelessWidget {
   const SlideLayout0({
     super.key,
@@ -79,13 +125,13 @@ class SlideLayout1 extends StatelessWidget {
     required this.headline,
     required this.body,
     required this.image,
-    required this.rows,
+    required this.table,
   });
 
   final Widget headline;
   final Widget body;
   final Widget image;
-  final List<TableRow> rows;
+  final Widget table;
 
   @override
   Widget build(BuildContext context) {
@@ -118,16 +164,7 @@ class SlideLayout1 extends StatelessWidget {
                     const SizedBox(height: 16),
                     Expanded(child: image),
                     const SizedBox(height: 16),
-                    Table(
-                      border: TableBorder(
-                        horizontalInside: Divider.createBorderSide(context),
-                      ),
-                      columnWidths: const {0: IntrinsicColumnWidth()},
-                      defaultVerticalAlignment:
-                          TableCellVerticalAlignment.baseline,
-                      textBaseline: TextBaseline.alphabetic,
-                      children: rows,
-                    ),
+                    table,
                     const SizedBox(height: 16),
                   ],
                 ),
@@ -148,13 +185,13 @@ class SlideLayout2 extends StatelessWidget {
     required this.headline,
     required this.body,
     required this.image,
-    required this.rows,
+    required this.table,
   });
 
   final Widget headline;
   final Widget body;
   final Widget image;
-  final List<TableRow> rows;
+  final Widget table;
 
   @override
   Widget build(BuildContext context) {
@@ -187,16 +224,7 @@ class SlideLayout2 extends StatelessWidget {
                       child: body,
                     ),
                     const SizedBox(height: 16),
-                    Table(
-                      border: TableBorder(
-                        horizontalInside: Divider.createBorderSide(context),
-                      ),
-                      columnWidths: const {0: IntrinsicColumnWidth()},
-                      defaultVerticalAlignment:
-                          TableCellVerticalAlignment.baseline,
-                      textBaseline: TextBaseline.alphabetic,
-                      children: rows,
-                    ),
+                    table,
                     const Spacer(flex: 2),
                   ],
                 ),
@@ -217,13 +245,13 @@ class SlideLayout3 extends StatelessWidget {
     required this.headline,
     required this.body,
     required this.image,
-    required this.rows,
+    required this.table,
   });
 
   final Widget headline;
   final Widget body;
   final Widget image;
-  final List<TableRow> rows;
+  final Widget table;
 
   @override
   Widget build(BuildContext context) {
@@ -257,16 +285,7 @@ class SlideLayout3 extends StatelessWidget {
                       child: body,
                     ),
                     const SizedBox(height: 16),
-                    Table(
-                      border: TableBorder(
-                        horizontalInside: Divider.createBorderSide(context),
-                      ),
-                      columnWidths: const {0: IntrinsicColumnWidth()},
-                      defaultVerticalAlignment:
-                          TableCellVerticalAlignment.baseline,
-                      textBaseline: TextBaseline.alphabetic,
-                      children: rows,
-                    ),
+                    table,
                   ],
                 ),
               ),
@@ -286,13 +305,13 @@ class SlideLayout4 extends StatelessWidget {
     required this.headline,
     required this.body,
     required this.image,
-    required this.rows,
+    required this.list,
   });
 
   final Widget headline;
   final Widget body;
   final Widget image;
-  final List<Widget> rows;
+  final Widget list;
 
   @override
   Widget build(BuildContext context) {
@@ -333,18 +352,7 @@ class SlideLayout4 extends StatelessWidget {
                   children: [
                     Expanded(child: image),
                     const SizedBox(height: 32),
-                    for (final row in rows)
-                      Padding(
-                        padding: const EdgeInsets.all(4),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text('\u2022'),
-                            const SizedBox(width: 4),
-                            row,
-                          ],
-                        ),
-                      ),
+                    list,
                     const Spacer(),
                   ],
                 ),

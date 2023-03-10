@@ -136,43 +136,43 @@ class _MyHomePageState extends State<MyHomePage> {
         headline: Text(context.l10n.applicationSlideTitle),
         body: Text(context.l10n.applicationSlideBody(flavor)),
         image: const Placeholder(),
-        rows: rows,
+        table: SlideTable(rows: rows),
       ),
       SlideLayout2(
         headline: Text(context.l10n.developmentSlideTitle),
         body: Text(context.l10n.developmentSlideBody(flavor)),
         image: const Placeholder(),
-        rows: rows,
+        table: SlideTable(rows: rows),
       ),
       SlideLayout1(
         headline: Text(context.l10n.creativitySlideTitle),
         body: Text(context.l10n.creativitySlideBody(flavor)),
         image: const Placeholder(),
-        rows: rows,
+        table: SlideTable(rows: rows),
       ),
       SlideLayout3(
         headline: Text(context.l10n.gamingSlideTitle),
         body: Text(context.l10n.gamingSlideBody(flavor)),
         image: const Placeholder(),
-        rows: rows,
+        table: SlideTable(rows: rows),
       ),
       SlideLayout1(
         headline: Text(context.l10n.securitySlideTitle),
         body: Text(context.l10n.securitySlideBody(flavor)),
         image: const Placeholder(),
-        rows: rows,
+        table: SlideTable(rows: rows),
       ),
       SlideLayout3(
         headline: Text(context.l10n.productivitySlideTitle),
         body: Text(context.l10n.productivitySlideBody(flavor)),
         image: const Placeholder(),
-        rows: rows,
+        table: SlideTable(rows: rows),
       ),
       SlideLayout2(
         headline: Text(context.l10n.accessibilitySlideTitle),
         body: Text(context.l10n.accessibilitySlideBody(flavor)),
         image: const Placeholder(),
-        rows: rows,
+        table: SlideTable(rows: rows),
       ),
       SlideLayout4(
         headline: Text(context.l10n.supportSlideTitle),
@@ -186,12 +186,14 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
         image: const Placeholder(),
-        rows: [
-          Text(context.l10n.supportSlideDocumentation),
-          const Text('Ask Ubuntu'),
-          const Text('Ubuntu Discourse'),
-          Text(context.l10n.supportSlideUbuntuPro),
-        ],
+        list: SlideList(
+          children: [
+            Text(context.l10n.supportSlideDocumentation),
+            const Text('Ask Ubuntu'),
+            const Text('Ubuntu Discourse'),
+            Text(context.l10n.supportSlideUbuntuPro),
+          ],
+        ),
       ),
     ];
 
