@@ -53,47 +53,29 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final rows = [
-      const TableRow(
+      const SlideRow(
+        header: Text('Included:'),
         children: [
-          Padding(
-            padding: EdgeInsetsDirectional.only(bottom: 16, end: 40),
-            child: Text('Included:'),
-          ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 16),
-            child: SlideLabel(
-              icon: Placeholder(),
-              label: Text('FeralGameMode'),
-            ),
+          SlideLabel(
+            icon: Placeholder(),
+            label: Text('FeralGameMode'),
           ),
         ],
       ),
-      TableRow(
+      const SlideRow(
+        header: Text('Available:'),
         children: [
-          const Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 16, 40, 16),
-            child: Text('Available:'),
+          SlideLabel(
+            icon: Placeholder(),
+            label: Text('Steam'),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            child: Wrap(
-              spacing: 24,
-              runSpacing: 24,
-              children: const [
-                SlideLabel(
-                  icon: Placeholder(),
-                  label: Text('Steam'),
-                ),
-                SlideLabel(
-                  icon: Placeholder(),
-                  label: Text('Discord'),
-                ),
-                SlideLabel(
-                  icon: Placeholder(),
-                  label: Text('OBS Studio'),
-                ),
-              ],
-            ),
+          SlideLabel(
+            icon: Placeholder(),
+            label: Text('Discord'),
+          ),
+          SlideLabel(
+            icon: Placeholder(),
+            label: Text('OBS Studio'),
           ),
         ],
       ),
