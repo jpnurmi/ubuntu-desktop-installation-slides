@@ -79,6 +79,8 @@
       "DISTRO": {}
     }
   },
+  "accessibilitySlideScreenReader": "Orca Screen Reader",
+  "accessibilitySlideLanguageSupport": "Language support",
   "supportSlideTitle": "Help & Support",
   "supportSlideHeader": "The official {DISTRO} documentation is available both online and via the Help icon in the dock.",
   "@supportSlideHeader": {

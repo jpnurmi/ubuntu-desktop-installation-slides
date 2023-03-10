@@ -52,35 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final rows = [
-      const SlideRow(
-        header: Text('Included:'),
-        children: [
-          SlideLabel(
-            icon: Placeholder(),
-            label: Text('FeralGameMode'),
-          ),
-        ],
-      ),
-      const SlideRow(
-        header: Text('Available:'),
-        children: [
-          SlideLabel(
-            icon: Placeholder(),
-            label: Text('Steam'),
-          ),
-          SlideLabel(
-            icon: Placeholder(),
-            label: Text('Discord'),
-          ),
-          SlideLabel(
-            icon: Placeholder(),
-            label: Text('OBS Studio'),
-          ),
-        ],
-      ),
-    ];
-
     const flavor = 'Ubuntu';
     const product = 'Ubuntu XX.XX';
 
@@ -100,43 +71,226 @@ class _MyHomePageState extends State<MyHomePage> {
         headline: Text(context.l10n.applicationSlideTitle),
         body: Text(context.l10n.applicationSlideBody(flavor)),
         image: const Placeholder(),
-        table: SlideTable(rows: rows),
+        table: SlideTable(
+          rows: [
+            SlideRow(
+              header: Text(context.l10n.installationSlidesAvailable),
+              children: const [
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Spotify'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Shotcut'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Telegram'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Nextcloud'),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
       SlideLayout2(
         headline: Text(context.l10n.developmentSlideTitle),
         body: Text(context.l10n.developmentSlideBody(flavor)),
         image: const Placeholder(),
-        table: SlideTable(rows: rows),
+        table: SlideTable(
+          rows: [
+            SlideRow(
+              header: Text(context.l10n.installationSlidesAvailable),
+              children: const [
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Visual Studio Code'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('IDEA Ultimate'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Pycharm'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('GitKraken'),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
       SlideLayout1(
         headline: Text(context.l10n.creativitySlideTitle),
         body: Text(context.l10n.creativitySlideBody(flavor)),
         image: const Placeholder(),
-        table: SlideTable(rows: rows),
+        table: SlideTable(
+          rows: [
+            SlideRow(
+              header: Text(context.l10n.installationSlidesAvailable),
+              children: const [
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Blender'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Audacity'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Kdenlive'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Godot'),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
       SlideLayout3(
         headline: Text(context.l10n.gamingSlideTitle),
         body: Text(context.l10n.gamingSlideBody(flavor)),
         image: const Placeholder(),
-        table: SlideTable(rows: rows),
+        table: SlideTable(
+          rows: [
+            SlideRow(
+              header: Text(context.l10n.installationSlidesIncluded),
+              children: const [
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Feral GameMode'),
+                ),
+              ],
+            ),
+            SlideRow(
+              header: Text(context.l10n.installationSlidesAvailable),
+              children: const [
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Steam'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Discord'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('OBS Studio'),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
       SlideLayout1(
         headline: Text(context.l10n.securitySlideTitle),
         body: Text(context.l10n.securitySlideBody(flavor)),
         image: const Placeholder(),
-        table: SlideTable(rows: rows),
+        table: SlideTable(
+          rows: [
+            SlideRow(
+              header: Text(context.l10n.installationSlidesIncluded),
+              children: const [
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Firefox'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('WireGuard'),
+                ),
+              ],
+            ),
+            SlideRow(
+              header: Text(context.l10n.installationSlidesAvailable),
+              children: const [
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Brave'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Bitwarden'),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
       SlideLayout3(
         headline: Text(context.l10n.productivitySlideTitle),
         body: Text(context.l10n.productivitySlideBody(flavor)),
         image: const Placeholder(),
-        table: SlideTable(rows: rows),
+        table: SlideTable(
+          rows: [
+            SlideRow(
+              header: Text(context.l10n.installationSlidesIncluded),
+              children: const [
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Thunderbird'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('LibreOffice'),
+                ),
+              ],
+            ),
+            SlideRow(
+              header: Text(context.l10n.installationSlidesAvailable),
+              children: const [
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Zoom'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Microsoft Teams'),
+                ),
+                SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('Slack'),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
       SlideLayout2(
         headline: Text(context.l10n.accessibilitySlideTitle),
         body: Text(context.l10n.accessibilitySlideBody(flavor)),
         image: const Placeholder(),
-        table: SlideTable(rows: rows),
+        table: SlideTable(
+          rows: [
+            SlideRow(
+              header: Text(context.l10n.installationSlidesIncluded),
+              children: [
+                const SlideLabel(
+                  icon: Placeholder(),
+                  label: Text('LibreOffice Writer'),
+                ),
+                SlideLabel(
+                  icon: const Placeholder(),
+                  label: Text(context.l10n.accessibilitySlideScreenReader),
+                ),
+                SlideLabel(
+                  icon: const Placeholder(),
+                  label: Text(context.l10n.accessibilitySlideLanguageSupport),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
       SlideLayout4(
         headline: Text(context.l10n.supportSlideTitle),
