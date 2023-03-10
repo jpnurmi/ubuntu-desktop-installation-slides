@@ -67,9 +67,9 @@ class _SlideTransitions extends StatelessWidget {
         _opacity = animation.secondHalf.drive(_easeInTween),
         _secondaryOpacity = secondaryAnimation.firstHalf.drive(_easeOutTween);
 
-  static final _tween = Tween(begin: const Offset(0.0, 0.1), end: Offset.zero);
+  static final _tween = Tween(begin: const Offset(0.0, 0.05), end: Offset.zero);
   static final _secondaryTween =
-      Tween(begin: Offset.zero, end: const Offset(0.0, -0.1));
+      Tween(begin: Offset.zero, end: const Offset(0.0, -0.05));
   static final _fastOutSlowInTween = CurveTween(curve: Curves.fastOutSlowIn);
   static final _easeInTween = CurveTween(curve: Curves.easeIn);
   static final _easeOutTween = CurveTween(curve: Curves.easeOutExpo);
