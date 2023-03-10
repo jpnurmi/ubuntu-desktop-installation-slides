@@ -199,6 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
       extendBody: true,
       extendBodyBehindAppBar: true,
       appBar: const YaruWindowTitleBar(
+        title: Text('Welcome to $flavor'),
         isMinimizable: false,
         isMaximizable: false,
         backgroundColor: Colors.transparent,
