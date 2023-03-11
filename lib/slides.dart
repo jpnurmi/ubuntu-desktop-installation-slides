@@ -31,6 +31,56 @@ Map<String, Style> _linkStyle(BuildContext context) {
   };
 }
 
+class SlideScreenshot extends StatelessWidget {
+  const SlideScreenshot(
+    this.name, {
+    super.key,
+    this.alignment = Alignment.center,
+    this.background,
+    this.fit,
+  });
+
+  final String name;
+  final Color? background;
+  final AlignmentGeometry alignment;
+  final BoxFit? fit;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context).brightness.name;
+    return DecoratedBox(
+      decoration: BoxDecoration(color: background),
+      child: Image.asset(
+        'assets/installation_slides/screenshots/$theme/$name.png',
+        errorBuilder: (_, __, ___) => Image.asset(
+          'assets/installation_slides/screenshots/$name.png',
+          alignment: alignment,
+          fit: fit,
+        ),
+        alignment: alignment,
+        fit: fit,
+      ),
+    );
+  }
+}
+
+class SlideIcon extends StatelessWidget {
+  const SlideIcon(this.name, {super.key});
+
+  final String name;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context).brightness.name;
+    return Image.asset(
+      'assets/installation_slides/icons/$theme/$name.png',
+      errorBuilder: (_, __, ___) => Image.asset(
+        'assets/installation_slides/icons/$name.png',
+      ),
+    );
+  }
+}
+
 class SlideColumn extends StatelessWidget {
   const SlideColumn({super.key, required this.children, this.spacing});
 
@@ -276,7 +326,7 @@ class SlideLayout1 extends StatelessWidget {
                       child: body,
                     ),
                     const SizedBox(height: 16),
-                    Expanded(child: image),
+                    image,
                     const SizedBox(height: 16),
                     table,
                     const SizedBox(height: 16),
@@ -319,7 +369,11 @@ class SlideLayout2 extends StatelessWidget {
             children: [
               Expanded(
                 flex: 9,
-                child: image,
+                child: UnconstrainedBox(
+                  clipBehavior: Clip.hardEdge,
+                  alignment: Alignment.topLeft,
+                  child: image,
+                ),
               ),
               const Spacer(flex: 1),
               Expanded(

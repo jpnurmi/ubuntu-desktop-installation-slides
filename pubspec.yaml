@@ -25,3 +25,15 @@ dev_dependencies:
 flutter:
   generate: true
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/installation_slides/
+    - assets/installation_slides/icons/
+    - assets/installation_slides/icons/dark/
+    - assets/installation_slides/icons/light/
+    - assets/installation_slides/screenshots/
+    - assets/installation_slides/screenshots/2.0x/
+    - assets/installation_slides/screenshots/dark/
+    - assets/installation_slides/screenshots/dark/2.0x/
+    - assets/installation_slides/screenshots/light/
+    - assets/installation_slides/screenshots/light/2.0x/

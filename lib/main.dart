@@ -66,26 +66,30 @@ class _SlidesPageState extends State<SlidesPage> {
       SlideLayout3(
         headline: Text(context.l10n.applicationSlideTitle),
         body: Text(context.l10n.applicationSlideBody(flavor)),
-        image: const Placeholder(),
+        image: const SlideScreenshot(
+          'store',
+          alignment: Alignment.center,
+          background: Color(0xff2c2c2c),
+        ),
         table: SlideTable(
           rows: [
             SlideRow(
               header: Text(context.l10n.installationSlidesAvailable),
               children: const [
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('spotify'),
                   label: Text('Spotify'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('shotcut'),
                   label: Text('Shotcut'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('telegram'),
                   label: Text('Telegram'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('nextcloud'),
                   label: Text('Nextcloud'),
                 ),
               ],
@@ -96,26 +100,26 @@ class _SlidesPageState extends State<SlidesPage> {
       SlideLayout2(
         headline: Text(context.l10n.developmentSlideTitle),
         body: Text(context.l10n.developmentSlideBody(flavor)),
-        image: const Placeholder(),
+        image: const SlideScreenshot('vscode'),
         table: SlideTable(
           rows: [
             SlideRow(
               header: Text(context.l10n.installationSlidesAvailable),
               children: const [
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('vscode'),
                   label: Text('Visual Studio Code'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('intellij'),
                   label: Text('IDEA Ultimate'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('pycharm'),
                   label: Text('Pycharm'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('gitkraken'),
                   label: Text('GitKraken'),
                 ),
               ],
@@ -126,26 +130,26 @@ class _SlidesPageState extends State<SlidesPage> {
       SlideLayout1(
         headline: Text(context.l10n.creativitySlideTitle),
         body: Text(context.l10n.creativitySlideBody(flavor)),
-        image: const Placeholder(),
+        image: const SlideScreenshot('blender'),
         table: SlideTable(
           rows: [
             SlideRow(
               header: Text(context.l10n.installationSlidesAvailable),
               children: const [
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('blender'),
                   label: Text('Blender'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('audacity'),
                   label: Text('Audacity'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('kdenlive'),
                   label: Text('Kdenlive'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('godot'),
                   label: Text('Godot'),
                 ),
               ],
@@ -156,14 +160,19 @@ class _SlidesPageState extends State<SlidesPage> {
       SlideLayout3(
         headline: Text(context.l10n.gamingSlideTitle),
         body: Text(context.l10n.gamingSlideBody(flavor)),
-        image: const Placeholder(),
+        image: const SlideScreenshot(
+          'dota',
+          alignment: Alignment.topLeft,
+          //background: Color(0xff1b2b40),
+          fit: BoxFit.cover,
+        ),
         table: SlideTable(
           rows: [
             SlideRow(
               header: Text(context.l10n.installationSlidesIncluded),
               children: const [
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('gamemode'),
                   label: Text('Feral GameMode'),
                 ),
               ],
@@ -172,15 +181,15 @@ class _SlidesPageState extends State<SlidesPage> {
               header: Text(context.l10n.installationSlidesAvailable),
               children: const [
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('steam'),
                   label: Text('Steam'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('discord'),
                   label: Text('Discord'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('obs'),
                   label: Text('OBS Studio'),
                 ),
               ],
@@ -198,11 +207,11 @@ class _SlidesPageState extends State<SlidesPage> {
               header: Text(context.l10n.installationSlidesIncluded),
               children: const [
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('firefox'),
                   label: Text('Firefox'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('wireguard'),
                   label: Text('WireGuard'),
                 ),
               ],
@@ -211,11 +220,11 @@ class _SlidesPageState extends State<SlidesPage> {
               header: Text(context.l10n.installationSlidesAvailable),
               children: const [
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('brave'),
                   label: Text('Brave'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('bitwarden'),
                   label: Text('Bitwarden'),
                 ),
               ],
@@ -233,11 +242,11 @@ class _SlidesPageState extends State<SlidesPage> {
               header: Text(context.l10n.installationSlidesIncluded),
               children: const [
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('thunderbird'),
                   label: Text('Thunderbird'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('libreoffice'),
                   label: Text('LibreOffice'),
                 ),
               ],
@@ -246,15 +255,15 @@ class _SlidesPageState extends State<SlidesPage> {
               header: Text(context.l10n.installationSlidesAvailable),
               children: const [
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('zoom'),
                   label: Text('Zoom'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('teams'),
                   label: Text('Microsoft Teams'),
                 ),
                 SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('slack'),
                   label: Text('Slack'),
                 ),
               ],
@@ -272,15 +281,15 @@ class _SlidesPageState extends State<SlidesPage> {
               header: Text(context.l10n.installationSlidesIncluded),
               children: [
                 const SlideLabel(
-                  icon: Placeholder(),
+                  icon: SlideIcon('writer'),
                   label: Text('LibreOffice Writer'),
                 ),
                 SlideLabel(
-                  icon: const Placeholder(),
+                  icon: const SlideIcon('orca'),
                   label: Text(context.l10n.accessibilitySlideScreenReader),
                 ),
                 SlideLabel(
-                  icon: const Placeholder(),
+                  icon: const SlideIcon('languages'),
                   label: Text(context.l10n.accessibilitySlideLanguageSupport),
                 ),
               ],
