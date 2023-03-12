@@ -1,6 +1,6 @@
 {
-  "installationSlidesAvailable": "Available",
-  "installationSlidesIncluded": "Included",
+  "installationSlidesAvailable": "Available:",
+  "installationSlidesIncluded": "Included:",
   "welcomeSlideTitle": "Fast, free and full of new features",
   "welcomeSlideHeader": "The latest version of {DISTRO} makes computing easier than ever.",
   "@welcomeSlideHeader": {

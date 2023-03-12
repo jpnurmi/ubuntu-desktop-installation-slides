@@ -367,14 +367,7 @@ class SlideLayout2 extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                flex: 9,
-                child: UnconstrainedBox(
-                  clipBehavior: Clip.hardEdge,
-                  alignment: Alignment.topLeft,
-                  child: image,
-                ),
-              ),
+              image,
               const Spacer(flex: 1),
               Expanded(
                 flex: 14,

@@ -165,7 +165,6 @@ class _SlidesPageState extends State<SlidesPage> {
         image: const SlideScreenshot(
           'dota',
           alignment: Alignment.topLeft,
-          //background: Color(0xff1b2b40),
           fit: BoxFit.cover,
         ),
         table: SlideTable(
@@ -276,7 +275,7 @@ class _SlidesPageState extends State<SlidesPage> {
       SlideLayout2(
         headline: Text(context.l10n.accessibilitySlideTitle),
         body: Text(context.l10n.accessibilitySlideBody(flavor)),
-        image: const Placeholder(),
+        image: const SlideScreenshot('accessibility'),
         table: SlideTable(
           rows: [
             SlideRow(
