@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:yaru_colors/yaru_colors.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 TextStyle _headlineStyle(BuildContext context) {
@@ -24,9 +23,8 @@ Map<String, Style> _linkStyle(BuildContext context) {
   return {
     'body': Style(margin: Margins.zero),
     'a': Style(
-      color: Theme.of(context).brightness == Brightness.light
-          ? YaruColors.blue[700]!
-          : YaruColors.blue[500]!,
+      color: Theme.of(context).colorScheme.onBackground,
+      textDecoration: TextDecoration.none,
     ),
   };
 }
