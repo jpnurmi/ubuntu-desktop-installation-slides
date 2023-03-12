@@ -55,153 +55,153 @@ class _SlidesPageState extends State<SlidesPage> {
     final theme = Theme.of(context).brightness.name;
 
     final slides = [
-      SlideLayout0(
-        headline: Text(context.l10n.welcomeSlideTitle),
-        body: SlideColumn(
-          children: [
-            Text(context.l10n.welcomeSlideHeader(flavor)),
-            Text(context.l10n.welcomeSlideBody(product)),
-          ],
-        ),
-        image: const Placeholder(),
-      ),
-      SlideLayout3(
-        headline: Text(context.l10n.applicationSlideTitle),
-        body: Text(context.l10n.applicationSlideBody(flavor)),
-        image: const SlideScreenshot(
-          'store',
-          alignment: Alignment.center,
-          background: Color(0xff2c2c2c),
-        ),
-        table: SlideTable(
-          rows: [
-            SlideRow(
-              header: Text(context.l10n.installationSlidesAvailable),
-              children: const [
-                SlideLabel(
-                  icon: SlideIcon('spotify'),
-                  label: Text('Spotify'),
-                ),
-                SlideLabel(
-                  icon: SlideIcon('shotcut'),
-                  label: Text('Shotcut'),
-                ),
-                SlideLabel(
-                  icon: SlideIcon('telegram'),
-                  label: Text('Telegram'),
-                ),
-                SlideLabel(
-                  icon: SlideIcon('nextcloud'),
-                  label: Text('Nextcloud'),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-      SlideLayout2(
-        headline: Text(context.l10n.developmentSlideTitle),
-        body: Text(context.l10n.developmentSlideBody(flavor)),
-        image: const SlideScreenshot('vscode'),
-        table: SlideTable(
-          rows: [
-            SlideRow(
-              header: Text(context.l10n.installationSlidesAvailable),
-              children: const [
-                SlideLabel(
-                  icon: SlideIcon('vscode'),
-                  label: Text('Visual Studio Code'),
-                ),
-                SlideLabel(
-                  icon: SlideIcon('intellij'),
-                  label: Text('IDEA Ultimate'),
-                ),
-                SlideLabel(
-                  icon: SlideIcon('pycharm'),
-                  label: Text('Pycharm'),
-                ),
-                SlideLabel(
-                  icon: SlideIcon('gitkraken'),
-                  label: Text('GitKraken'),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-      SlideLayout1(
-        headline: Text(context.l10n.creativitySlideTitle),
-        body: Text(context.l10n.creativitySlideBody(flavor)),
-        image: const SlideScreenshot('blender'),
-        table: SlideTable(
-          rows: [
-            SlideRow(
-              header: Text(context.l10n.installationSlidesAvailable),
-              children: const [
-                SlideLabel(
-                  icon: SlideIcon('blender'),
-                  label: Text('Blender'),
-                ),
-                SlideLabel(
-                  icon: SlideIcon('audacity'),
-                  label: Text('Audacity'),
-                ),
-                SlideLabel(
-                  icon: SlideIcon('kdenlive'),
-                  label: Text('Kdenlive'),
-                ),
-                SlideLabel(
-                  icon: SlideIcon('godot'),
-                  label: Text('Godot'),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-      SlideLayout3(
-        headline: Text(context.l10n.gamingSlideTitle),
-        body: Text(context.l10n.gamingSlideBody(flavor)),
-        image: const SlideScreenshot(
-          'dota',
-          alignment: Alignment.topLeft,
-          fit: BoxFit.cover,
-        ),
-        table: SlideTable(
-          rows: [
-            SlideRow(
-              header: Text(context.l10n.installationSlidesIncluded),
-              children: const [
-                SlideLabel(
-                  icon: SlideIcon('gamemode'),
-                  label: Text('Feral GameMode'),
-                ),
-              ],
-            ),
-            SlideRow(
-              header: Text(context.l10n.installationSlidesAvailable),
-              children: const [
-                SlideLabel(
-                  icon: SlideIcon('steam'),
-                  label: Text('Steam'),
-                ),
-                SlideLabel(
-                  icon: SlideIcon('discord'),
-                  label: Text('Discord'),
-                ),
-                SlideLabel(
-                  icon: SlideIcon('obs'),
-                  label: Text('OBS Studio'),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
+      // SlideLayout0(
+      //   headline: Text(context.l10n.welcomeSlideTitle),
+      //   body: SlideColumn(
+      //     children: [
+      //       Text(context.l10n.welcomeSlideHeader(flavor)),
+      //       Text(context.l10n.welcomeSlideBody(product)),
+      //     ],
+      //   ),
+      //   image: const Placeholder(),
+      // ),
+      // SlideLayout3(
+      //   headline: Text(context.l10n.applicationSlideTitle),
+      //   body: Text(context.l10n.applicationSlideBody(flavor)),
+      //   image: const SlideScreenshot(
+      //     'store',
+      //     alignment: Alignment.center,
+      //     background: Color(0xff2c2c2c),
+      //   ),
+      //   table: SlideTable(
+      //     rows: [
+      //       SlideRow(
+      //         header: Text(context.l10n.installationSlidesAvailable),
+      //         children: const [
+      //           SlideLabel(
+      //             icon: SlideIcon('spotify'),
+      //             label: Text('Spotify'),
+      //           ),
+      //           SlideLabel(
+      //             icon: SlideIcon('shotcut'),
+      //             label: Text('Shotcut'),
+      //           ),
+      //           SlideLabel(
+      //             icon: SlideIcon('telegram'),
+      //             label: Text('Telegram'),
+      //           ),
+      //           SlideLabel(
+      //             icon: SlideIcon('nextcloud'),
+      //             label: Text('Nextcloud'),
+      //           ),
+      //         ],
+      //       ),
+      //     ],
+      //   ),
+      // ),
+      // SlideLayout2(
+      //   headline: Text(context.l10n.developmentSlideTitle),
+      //   body: Text(context.l10n.developmentSlideBody(flavor)),
+      //   image: const SlideScreenshot('vscode'),
+      //   table: SlideTable(
+      //     rows: [
+      //       SlideRow(
+      //         header: Text(context.l10n.installationSlidesAvailable),
+      //         children: const [
+      //           SlideLabel(
+      //             icon: SlideIcon('vscode'),
+      //             label: Text('Visual Studio Code'),
+      //           ),
+      //           SlideLabel(
+      //             icon: SlideIcon('intellij'),
+      //             label: Text('IDEA Ultimate'),
+      //           ),
+      //           SlideLabel(
+      //             icon: SlideIcon('pycharm'),
+      //             label: Text('Pycharm'),
+      //           ),
+      //           SlideLabel(
+      //             icon: SlideIcon('gitkraken'),
+      //             label: Text('GitKraken'),
+      //           ),
+      //         ],
+      //       ),
+      //     ],
+      //   ),
+      // ),
+      // SlideLayout1(
+      //   headline: Text(context.l10n.creativitySlideTitle),
+      //   body: Text(context.l10n.creativitySlideBody(flavor)),
+      //   image: const SlideScreenshot('blender'),
+      //   table: SlideTable(
+      //     rows: [
+      //       SlideRow(
+      //         header: Text(context.l10n.installationSlidesAvailable),
+      //         children: const [
+      //           SlideLabel(
+      //             icon: SlideIcon('blender'),
+      //             label: Text('Blender'),
+      //           ),
+      //           SlideLabel(
+      //             icon: SlideIcon('audacity'),
+      //             label: Text('Audacity'),
+      //           ),
+      //           SlideLabel(
+      //             icon: SlideIcon('kdenlive'),
+      //             label: Text('Kdenlive'),
+      //           ),
+      //           SlideLabel(
+      //             icon: SlideIcon('godot'),
+      //             label: Text('Godot'),
+      //           ),
+      //         ],
+      //       ),
+      //     ],
+      //   ),
+      // ),
+      // SlideLayout3(
+      //   headline: Text(context.l10n.gamingSlideTitle),
+      //   body: Text(context.l10n.gamingSlideBody(flavor)),
+      //   image: const SlideScreenshot(
+      //     'dota',
+      //     alignment: Alignment.topLeft,
+      //     fit: BoxFit.cover,
+      //   ),
+      //   table: SlideTable(
+      //     rows: [
+      //       SlideRow(
+      //         header: Text(context.l10n.installationSlidesIncluded),
+      //         children: const [
+      //           SlideLabel(
+      //             icon: SlideIcon('gamemode'),
+      //             label: Text('Feral GameMode'),
+      //           ),
+      //         ],
+      //       ),
+      //       SlideRow(
+      //         header: Text(context.l10n.installationSlidesAvailable),
+      //         children: const [
+      //           SlideLabel(
+      //             icon: SlideIcon('steam'),
+      //             label: Text('Steam'),
+      //           ),
+      //           SlideLabel(
+      //             icon: SlideIcon('discord'),
+      //             label: Text('Discord'),
+      //           ),
+      //           SlideLabel(
+      //             icon: SlideIcon('obs'),
+      //             label: Text('OBS Studio'),
+      //           ),
+      //         ],
+      //       ),
+      //     ],
+      //   ),
+      // ),
       SlideLayout1(
         headline: Text(context.l10n.securitySlideTitle),
         body: Text(context.l10n.securitySlideBody(flavor)),
-        image: const Placeholder(),
+        image: const SlideScreenshot('bitwarden'),
         table: SlideTable(
           rows: [
             SlideRow(
