@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
@@ -51,6 +52,7 @@ class _SlidesPageState extends State<SlidesPage> {
   Widget build(BuildContext context) {
     const flavor = 'Ubuntu';
     const product = 'Ubuntu XX.XX';
+    final theme = Theme.of(context).brightness.name;
 
     final slides = [
       SlideLayout0(
@@ -306,7 +308,9 @@ class _SlidesPageState extends State<SlidesPage> {
             Text(context.l10n.supportSlideEnterprise),
           ],
         ),
-        image: const Placeholder(),
+        image: SvgPicture.asset(
+          'assets/installation_slides/icons/$theme/ask-ubuntu.svg',
+        ),
         list: SlideList(
           children: [
             SlideLink(

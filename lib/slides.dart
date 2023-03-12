@@ -518,9 +518,12 @@ class SlideLayout4 extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Expanded(child: image),
-                    const SizedBox(height: 32),
-                    list,
+                    Align(
+                      alignment: AlignmentDirectional.topStart,
+                      child: image,
+                    ),
+                    const SizedBox(height: 48),
+                    Expanded(child: list),
                     const Spacer(),
                   ],
                 ),
